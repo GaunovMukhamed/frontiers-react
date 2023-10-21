@@ -1,0 +1,17 @@
+.pageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  & > :not(:last-child) {
+    margin-bottom: var(--indent-2);
+  }
+}
+
