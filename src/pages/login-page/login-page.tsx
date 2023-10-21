@@ -3,15 +3,19 @@ import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
 import { SyntheticEvent, useState } from "react";
+import { useCookies } from "react-cookie";
         
 const LoginPage = () => {
 
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
 
+  const [cookies, setCookie] = useCookies(["login", "password"]);
+
   const handleSubmit = (event: SyntheticEvent): void => {
     event.preventDefault();
-    console.log(event)
+    setCookie("login", login, { path: "/" });
+    setCookie("password", password, { path: "/" });
   }
 
   return (
