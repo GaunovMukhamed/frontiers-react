@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter, redirect } from 'react-router-dom';
 import LoginPage from './pages/login-page/login-page';
-import styles from "./App.module.scss";
+import "./App.scss";
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
   ]);
 
   return (
-    <div className={styles.mainContainer}>
+    <div className="appContainer">
       <RouterProvider router={router} />
     </div>
   );

@@ -1,7 +1,12 @@
-
+import { InputText } from 'primereact/inputtext';
+import { Button } from 'primereact/button';
+        
 const LoginPage = () => {
   return (
-    <div>asd</div>
+    <div>
+      <InputText />
+      <Button label="Submit"/>
+    </div>
   );
 }
 
