@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter, redirect } from 'react-router-dom'
 import LoginPage from './pages/login-page/login-page';
 import "./App.scss";
 import { CookiesProvider } from "react-cookie";
+import { ToastContextProvider } from './providers/toast.provider';
 
 function App() {
 
@@ -23,7 +24,9 @@ function App() {
   return (
     <div className="appContainer">
       <CookiesProvider>
-        <RouterProvider router={router} />
+        <ToastContextProvider>
+          <RouterProvider router={router} />
+        </ToastContextProvider>
       </CookiesProvider>
     </div>
   );
